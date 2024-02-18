@@ -13,7 +13,7 @@ const Hero = (props: Props) => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     try {
-      fetch("http://localhost:3000/api/hero")
+      fetch(process.env.NEXT_PUBLIC_API_URL + "/api/hero")
         .then((res) => res.json())
         .then((data) => {
           console.log(data);

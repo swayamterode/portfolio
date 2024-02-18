@@ -12,7 +12,7 @@ const page = (props: Props) => {
   const [description1, setDescription1] = React.useState("");
   const [description2, setDescription2] = React.useState("");
   React.useEffect(() => {
-    fetch("http://localhost:3000/api/about-me")
+    fetch( process.env.NEXT_PUBLIC_API_URL+"/api/about-me")
       .then((data) => data.json())
       .then((data) => {
         setHeading1(data[0].heading1);

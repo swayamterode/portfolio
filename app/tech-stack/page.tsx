@@ -8,7 +8,7 @@ const page = (props: Props) => {
   // const [data, setData] = useState!(null);
 
   // useEffect!(() => {
-  //   fetch("http://localhost:3000/api/tech-stack")
+  //   fetch(process.env.NEXT_PUBLIC_API_URL+"/api/tech-stack")
   //     .then((response) => response.json())
   //     .then((data) => setData(data))
   //     .catch((error) => console.error("Error:", error));
