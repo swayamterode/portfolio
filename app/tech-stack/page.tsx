@@ -5,14 +5,14 @@ import { cards } from "../constants/data";
 type Props = {};
 
 const page = (props: Props) => {
-  // const [data, setData] = useState!(null);
+  const [data, setData] = useState(null);
 
-  // useEffect!(() => {
-  //   fetch(process.env.NEXT_PUBLIC_API_URL+"/api/tech-stack")
-  //     .then((response) => response.json())
-  //     .then((data) => setData(data))
-  //     .catch((error) => console.error("Error:", error));
-  // }, []);
+  useEffect(() => {
+    fetch(process.env.NEXT_PUBLIC_API_URL+"/api/tech-stack")
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .catch((error) => console.error("Error:", error));
+  }, []);
 
   return (
     <>
@@ -33,7 +33,7 @@ const page = (props: Props) => {
           Dev & Design
         </h1>
         <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 w-full md:w-[70%] mx-auto gap-4 p-6 md:p-0">
-          {cards.map((card, index) => (
+          {data && (data as Array<any>).map((card, index: number) => (
             <div
               key={index}
               className="flex flex-col relative bg-[#F3F3F3] dark:bg-[#181818] mx-auto w-full h-[86px] md:h-[300px] rounded-3xl"
@@ -64,7 +64,7 @@ const page = (props: Props) => {
                   </div>
                 </div>
               </div>
-            </div>
+        </div>
           ))}
         </div>
       </div>
