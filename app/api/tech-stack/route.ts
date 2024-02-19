@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import connect from "@/lib/db";
 import TechStack from "@/lib/modals/text_stack";
-import { request } from "http";
 
 export const GET = async () => {
   try {
