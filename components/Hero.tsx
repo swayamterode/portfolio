@@ -16,8 +16,6 @@ const Hero = (props: Props) => {
       fetch(process.env.NEXT_PUBLIC_API_URL + "/api/hero")
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
-          console.log(data[0].heading);
           setHeading(data[0].heading);
           setDescription(data[0].description);
           setLoading(false);
