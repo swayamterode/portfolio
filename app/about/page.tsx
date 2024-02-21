@@ -12,7 +12,7 @@ const page = (props: Props) => {
   const [description1, setDescription1] = React.useState("");
   const [description2, setDescription2] = React.useState("");
   React.useEffect(() => {
-    fetch( process.env.NEXT_PUBLIC_API_URL+"/api/about-me")
+    fetch(process.env.NEXT_PUBLIC_API_URL + "/api/about-me")
       .then((data) => data.json())
       .then((data) => {
         setHeading1(data[0].heading1);
@@ -37,15 +37,21 @@ const page = (props: Props) => {
       {/* Content */}
       <div className="flex flex-col justify-between lg:flex-row w-full md:w-[70%] mx-auto">
         {/* Image for Mobile*/}
-        <div className="flex flex-col gap-6 lg:hidden">
-          <Image
-            src="/About.png"
-            alt="alt"
-            width={200}
-            height={200}
-            className="w-[60%] mx-auto"
-          />
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <div className="flex flex-col gap-6 lg:hidden">
+            <Image
+              src="/About.png"
+              alt="alt"
+              width={200}
+              height={200}
+              className="w-[60%] mx-auto"
+            />
+          </div>
+        </motion.div>
         {/* Common Description */}
         <div className="flex flex-col lg:w-[80%] px-6 lg:px-0">
           <div className="pt-6 flex flex-col text-justify ">
@@ -72,7 +78,7 @@ const page = (props: Props) => {
                 href="mailto:swayamterodex@gmail.com"
                 target="_blank"
                 rel="noreferrer"
-                className="text-white underline cursor-pointer"
+                className="text-black font-semibold dark:text-white underline cursor-pointer"
               >
                 e-mail
               </a>
@@ -81,7 +87,7 @@ const page = (props: Props) => {
                 href="https://twitter.com/swayamterode"
                 target="_blank"
                 rel="noreferrer"
-                className="text-white underline cursor-pointer"
+                className="text-black font-semibold dark:text-white underline cursor-pointer"
               >
                 Twitter
               </a>
@@ -91,7 +97,7 @@ const page = (props: Props) => {
                 href="https://www.linkedin.com/in/swayamterode/"
                 target="_blank"
                 rel="noreferrer"
-                className="text-white underline cursor-pointer"
+                className="text-black font-semibold dark:text-white underline cursor-pointer"
               >
                 LinkedIn
               </a>
