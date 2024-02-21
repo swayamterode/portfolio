@@ -10,7 +10,7 @@ const Navbar = (props: Props) => {
   return (
     <div className="hidden md:flex flex-row justify-between p-[16px] bg-[#ffffff3f] dark:bg-[#18181d4c] border dark:border-[#282828] flex-shrink-0 rounded-2xl mt-[32px] ml-auto backdrop-blur-3xl fixed top-0 w-[90%] lg:w-[73%] mx-auto z-50">
       {/* Img */}
-      {/* av Links */}
+      {/* Nav Links */}
       <div className="flex flex-row justify-between gap-[40px] items-center">
         <Link href={"/"}>Logo</Link>
         <Link
