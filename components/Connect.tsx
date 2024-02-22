@@ -1,8 +1,8 @@
-import React from "react";
-import GTButton from "./GTButton";
-type Props = {};
+import React from 'react'
+import GTButton from './GTButton'
+interface Props {}
 
-const Colab = (props: Props) => {
+const Connect = (props: Props) => {
   return (
     <div className="mb-20">
       <div className="md:flex justify-center items-center md:justify-between md:items-center p-4">
@@ -15,12 +15,13 @@ const Colab = (props: Props) => {
             when you are.
           </p>
         </div>
+
         <div className="mt-5 w-full md:w-[60%]">
           <GTButton />
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Colab;
+export default Connect
