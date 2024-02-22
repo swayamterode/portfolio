@@ -1,17 +1,19 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-type Props = {};
+'use client'
+import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
+import { set } from 'mongoose'
+interface Props {}
 
-const page = (props: Props) => {
-  const [data, setData] = useState(null);
-
+const page = () => {
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
-    fetch(process.env.NEXT_PUBLIC_API_URL + "/api/tech-stack")
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error("Error:", error));
-  }, []);
+    fetch(process.env.NEXT_PUBLIC_API_URL + '/api/tech-stack')
+      .then(async (response) => await response.json())
+      .then((data) => { setData(data) })
+      .then(() => { setLoading(false) })
+      .catch((error) => { console.error('Error:', error) })
+  }, [])
 
   return (
     <>
@@ -28,12 +30,24 @@ const page = (props: Props) => {
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-[#ffffff19]" />
 
         {/* Tech stack */}
+
         <h1 className="mt-10 md:mt-14 mb-3 md:mb-10 pl-6 md:p-0 text-para text-4xl font-bold md:w-[70%] mx-auto">
           Dev & Design
         </h1>
+        {loading && (
+          <div className=" bg-gray-200 dark:bg-[#ffffff19] rounded-3xl  m-4">
+            <div className="p-4 flex justify-center items-center">
+              <div className="w-16 h-12 bg-gray-400 dark:bg-[#ffffff19] animate-pulse transition-all duration-75 rounded-full"></div>
+              <div className="flex w-full justify-between items-center ml-4">
+                <div className="w-[95px] pl-2 h-3 bg-gray-400 dark:bg-[#ffffff19]  animate-pulse rounded-lg"></div>
+                <div className="w-[70px]  h-5 bg-gray-400 dark:bg-[#ffffff19]  animate-pulse rounded-3xl"></div>
+              </div>
+            </div>
+          </div>
+        )}
         <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 w-full md:w-[70%] mx-auto gap-4 p-6 md:p-0">
           {data &&
-            (data as Array<any>).map((card, index: number) => (
+            (data as any[]).map((card, index: number) => (
               <div
                 key={index}
                 className="flex flex-col relative bg-[#F3F3F3] dark:bg-[#181818] mx-auto w-full h-[86px] md:h-[300px] rounded-3xl"
@@ -72,7 +86,7 @@ const page = (props: Props) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default page;
+export default page
