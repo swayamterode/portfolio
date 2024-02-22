@@ -1,10 +1,10 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-type Props = {};
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+interface Props {}
 
 const Footer = (props: Props) => {
-  const year = new Date().getFullYear();
+  const year = new Date().getFullYear()
   return (
     <div className="relative z-10">
       <Image
@@ -16,8 +16,9 @@ const Footer = (props: Props) => {
       />
       {/* Add Hr line */}
       <hr className="border-[#00000019] dark:border-[#ffffff19] mb-[32px] z-10" />
+      {/* Footer */}
       <div className="md:max-w-[80%] lg:max-w-[60%] mx-auto z-10">
-        <div className="flex flex-col md:flex-row justify-between mx-auto py-[42px] px-8 md:px-0">
+        <div className="flex flex-col md:flex-row justify-between mx-auto pt-[12px] pb-[120px] md:pb-10 px-8 md:px-0">
           <div className="flex flex-col md:justify-between gap-3 md:gap-[93px]">
             <div>
               <p className="text-2xl font-bold">Logo</p>
@@ -86,7 +87,7 @@ const Footer = (props: Props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
