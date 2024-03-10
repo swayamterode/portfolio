@@ -8,11 +8,11 @@ type Props = {};
 const GetToKnowMe = (props: Props) => {
   return (
     <>
-      <div className=" flex flex-col gap-6 mb-20">
-        <h1 className="pl-4 text-3xl md:text-3xl 2xl:text-5xl font-bold">
+      <div className="flex flex-col gap-6 my-20 px-6">
+        <h1 className="text-3xl md:text-3xl 2xl:text-4xl font-bold">
           Get to know me
         </h1>
-        <div className="grid md:grid-cols-2 gap-5 p-4 overflow-hidden">
+        <div className="grid md:grid-cols-2 gap-5 py-4 overflow-hidden">
           {/*  About Me */}
           <motion.div
             initial="hidden"

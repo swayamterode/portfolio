@@ -31,7 +31,7 @@ const Hero = (props: Props) => {
           <Shimmer />
         </div>
       ) : (
-        <div className="mt-40 flex justify-start gap-[16px] p-6 md:p-4">
+        <div className="mt-40 mb-20 flex justify-start gap-[16px] p-6 md:p-4">
           <div className="flex flex-col justify-center gap-[40px]">
             <div>
               <span className="text-6xl font-bold text-para sm:hidden">

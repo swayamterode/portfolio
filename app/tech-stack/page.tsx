@@ -1,25 +1,31 @@
-'use client'
-import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
-import { set } from 'mongoose'
+"use client";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { set } from "mongoose";
 interface Props {}
 
 const page = () => {
-  const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch(process.env.NEXT_PUBLIC_API_URL + '/api/tech-stack')
+    fetch(process.env.NEXT_PUBLIC_API_URL + "/api/tech-stack")
       .then(async (response) => await response.json())
-      .then((data) => { setData(data) })
-      .then(() => { setLoading(false) })
-      .catch((error) => { console.error('Error:', error) })
-  }, [])
+      .then((data) => {
+        setData(data);
+      })
+      .then(() => {
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, []);
 
   return (
     <>
       <div className="mb-10">
         {/* Page heading */}
-        <div className="flex flex-col w-full md:w-[70%] mx-auto justify-start mt-[30%] sm:mt-[20%] md:mt-[15%] lg:mt-[18%] xl:mt-[8%] gap-2 px-6 lg:px-0">
+        <div className="flex flex-col w-full md:w-[70%] mx-auto justify-start mt-40 gap-2 px-6 lg:px-0">
           <h1 className="text-4xl md:text-5xl text-black dark:text-white font-bold ">
             Tech Stack & Tools
           </h1>
@@ -86,7 +92,7 @@ const page = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;

@@ -24,7 +24,7 @@ const page = (props: Props) => {
   return (
     <div className="mb-10">
       {/* Page heading */}
-      <div className="flex flex-col w-full md:w-[70%] mx-auto justify-start mt-[30%] sm:mt-[20%] md:mt-[15%] lg:mt-[18%] xl:mt-[8%] gap-2 px-6 lg:px-0">
+      <div className="flex flex-col w-full md:w-[70%] mx-auto justify-start mt-40 md:mt-[15%] lg:mt-[18%] xl:mt-[8%] gap-2 px-6 lg:px-0">
         <h1 className="text-4xl md:text-5xl text-black dark:text-white font-bold ">
           A little bit about me
         </h1>

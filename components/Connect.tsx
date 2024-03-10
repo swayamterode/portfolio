@@ -1,11 +1,11 @@
-import React from 'react'
-import GTButton from './GTButton'
+import React from "react";
+import GTButton from "./GTButton";
 interface Props {}
 
 const Connect = (props: Props) => {
   return (
     <div className="mb-20">
-      <div className="md:flex justify-center items-center md:justify-between md:items-center p-4">
+      <div className="md:flex justify-center items-center md:justify-between md:items-center py-10 px-6">
         <div className="flex flex-col justify-center items-center gap-2 w-full mx-auto">
           <h1 className="text-3xl font-bold w-full text-center md:text-start">
             Lets work together
@@ -21,7 +21,7 @@ const Connect = (props: Props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Connect
+export default Connect;

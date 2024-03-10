@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="no-scroll">
       <body className="bg:-[#FBFBFB] dark:bg-black">
         <Providers>
           <Image
