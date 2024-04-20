@@ -3,6 +3,12 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import HeroShimmer from "./HeroShimmer";
+import { Avatar } from "@readyplayerme/visage";
+import { memo } from "react";
+
+const modelSrc = "/SwayamModel.glb";
+const animationSrc = "/Hi_animation.fbx";
+
 type Props = {};
 const Shimmer = () => {
   return <HeroShimmer />;
@@ -11,6 +17,7 @@ const Hero = (props: Props) => {
   const [heading, setHeading] = useState("");
   const [description, setDescription] = useState("");
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     try {
       fetch(process.env.NEXT_PUBLIC_API_URL + "/api/hero")
@@ -24,6 +31,7 @@ const Hero = (props: Props) => {
       console.log(error);
     }
   }, []);
+
   return (
     <>
       {loading ? (
@@ -31,7 +39,7 @@ const Hero = (props: Props) => {
           <Shimmer />
         </div>
       ) : (
-        <div className="mt-40 mb-20 flex justify-start gap-[16px] p-6 md:p-4">
+        <div className="mt-40 mb-20 flex justify-start gap-[16px] p-6 md:p-4 h-96 relative">
           <div className="flex flex-col justify-center gap-[40px]">
             <div>
               <span className="text-6xl font-bold text-para sm:hidden">
@@ -42,7 +50,9 @@ const Hero = (props: Props) => {
                 <span className=" text-black dark:text-white">{heading}</span>
               </h1>
             </div>
-            <p className="text-xl text-para dark:text-para">{description}</p>
+            <p className="text-xl text-para dark:text-para w-[500px]">
+              {description}
+            </p>
             <div className=" space-y-4 md:space-y-0 md:flex justify-start gap-[16px]">
               <p className="bg-[#1A1A1A] text-white px-[32px] py-[16px] rounded-xl shadow-inner inset-y-0 inset-x-0 shadow-[#3b3b3b] cursor-pointer font-semibold text-center">
                 See my resume
@@ -52,7 +62,7 @@ const Hero = (props: Props) => {
               </p>
             </div>
           </div>
-          <motion.div
+          {/* <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.5 }}
@@ -69,11 +79,22 @@ const Hero = (props: Props) => {
               height={740}
               alt="Hero Image"
             />
-          </motion.div>
+          </motion.div> */}
+          <div className="h-[50rem] w-[50rem] absolute -top-20 -right-40 -z-50">
+            <Avatar
+              modelSrc={modelSrc}
+              animationSrc={animationSrc}
+              cameraInitialDistance={2}
+              emotion={{
+                mouthSmileLeft: 1, // Adjust this value to make the avatar smile
+                mouthSmileRight: 1, // Adjust this value to make the avatar smile
+              }}
+            />
+          </div>
         </div>
       )}
     </>
   );
 };
 
-export default Hero;
+export default memo(Hero);

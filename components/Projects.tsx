@@ -29,6 +29,21 @@ const Projects = (props: Props) => {
                 {project.description}
               </p>
             </div>
+            <div className="flex gap-2 items-center mb-4 pl-10">
+              <span className="font-medium">Tech Stack:</span>
+              <div className="flex gap-2">
+                <span className="px-2 py-1 text-xs font-semibold text-white bg-[#FBFBFB] dark:bg-[#353535] rounded-lg border-[#EBEBEB] dark:border-[#383737]">
+                  React
+                </span>
+
+                <span className="px-2 py-1 text-xs font-semibold text-white bg-[#FBFBFB] dark:bg-[#353535] rounded-lg border-[#EBEBEB] dark:border-[#383737]">
+                  React
+                </span>
+                <span className="px-2 py-1 text-xs font-semibold text-white bg-[#FBFBFB] dark:bg-[#353535] rounded-lg border-[#EBEBEB] dark:border-[#383737]">
+                  React
+                </span>
+              </div>
+            </div>
             <div className="flex gap-2 items-center mb-4 pl-10 ">
               <Link href={project.link} target="_blank">
                 <span className="hover:text-gray-300">
@@ -48,7 +63,7 @@ const Projects = (props: Props) => {
             alt={project.alt}
             width={265}
             height={265}
-            className="md:w-[380px] md:h-[390px] lg:w-[310.17px] lg:h-[420px] object-contain ml-10 hidden md:block"
+            className="md:w-[380px] md:h-[390px] lg:w-[310.17px] lg:h-[420px] object-contain mx-10 hidden md:block"
           />
         </div>
       ))}

@@ -34,7 +34,7 @@ const GetToKnowMe = (props: Props) => {
                   </p>
                 </div>
                 <Image
-                  src="/Me.png"
+                  src="/aboutme.png"
                   alt="alt"
                   width={200}
                   height={200}
@@ -58,13 +58,13 @@ const GetToKnowMe = (props: Props) => {
             <Link href={"/about"}>
               <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
                 <div className="flex flex-col mx-auto items-center -mt-64">
-                  <h1 className="text-3xl font-bold text-center">About Me</h1>
+                  <h1 className="text-3xl font-bold text-center">Work</h1>
                   <p className="text-para text-center">
-                    Who I am and what I do.
+                    What I have done and what I am working on.
                   </p>
                 </div>
                 <Image
-                  src="/Me.png"
+                  src="/work.png"
                   alt="alt"
                   width={200}
                   height={200}
@@ -88,13 +88,11 @@ const GetToKnowMe = (props: Props) => {
             <Link href={"/about"}>
               <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
                 <div className="flex flex-col mx-auto items-center -mt-64">
-                  <h1 className="text-3xl font-bold text-center">About Me</h1>
-                  <p className="text-para text-center">
-                    Who I am and what I do.
-                  </p>
+                  <h1 className="text-3xl font-bold text-center">Contact Me</h1>
+                  <p className="text-para text-center">Get in touch with me.</p>
                 </div>
                 <Image
-                  src="/Me.png"
+                  src="/contact.png"
                   alt="alt"
                   width={200}
                   height={200}
@@ -104,6 +102,7 @@ const GetToKnowMe = (props: Props) => {
             </Link>
           </motion.div>
           {/* Tech Stack */}
+
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -111,25 +110,27 @@ const GetToKnowMe = (props: Props) => {
             transition={{ duration: 1 }}
             variants={{
               visible: { opacity: 1, x: 0 },
-              hidden: { opacity: 0, x: 100 },
+              hidden: { opacity: 0, x: -100 },
             }}
             whileTap={{ scale: 0.9 }}
           >
-            <div className="relative flex flex-col border h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
-              <div className="flex flex-col mx-auto items-center mt-10">
-                <h1 className="text-3xl font-bold text-center">Tech Stack</h1>
-                <p className="text-para text-center">
-                  Technologies I work with and I am familiar with.
-                </p>
+            <Link href={"/about"}>
+              <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
+                <div className="flex flex-col mx-auto items-center -mt-64">
+                  <h1 className="text-3xl font-bold text-center">Tech Stack</h1>
+                  <p className="text-para text-center">
+                    Technologies I have worked with.
+                  </p>
+                </div>
+                <Image
+                  src="/tech-stack.svg"
+                  alt="alt"
+                  width={200}
+                  height={200}
+                  className="absolute bottom-0 w-[300px] h-[250px] rounded-lg object-cover"
+                />
               </div>
-              <Image
-                src="/tech-stack.svg"
-                alt="alt"
-                width={200}
-                height={200}
-                className="absolute bottom-0 w-[494px] h-[250px] rounded-lg object-cover"
-              />
-            </div>
+            </Link>
           </motion.div>
         </div>
       </div>

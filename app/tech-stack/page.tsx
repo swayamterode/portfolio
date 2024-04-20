@@ -51,7 +51,7 @@ const page = () => {
             </div>
           </div>
         )}
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 w-full md:w-[70%] mx-auto gap-4 p-6 md:p-0">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 w-full md:w-[70%] mx-auto gap-4 p-6 md:p-0">
           {data &&
             (data as any[]).map((card, index: number) => (
               <div
