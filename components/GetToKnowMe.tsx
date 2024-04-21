@@ -26,7 +26,7 @@ const GetToKnowMe = (props: Props) => {
             whileTap={{ scale: 0.9 }}
           >
             <Link href={"/about"}>
-              <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
+              <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] md:h-[350px] lg:h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
                 <div className="flex flex-col mx-auto items-center -mt-64">
                   <h1 className="text-3xl font-bold text-center">About Me</h1>
                   <p className="text-para text-center">
@@ -56,11 +56,11 @@ const GetToKnowMe = (props: Props) => {
             whileTap={{ scale: 0.9 }}
           >
             <Link href={"/about"}>
-              <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
+              <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] md:h-[350px] lg:h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
                 <div className="flex flex-col mx-auto items-center -mt-64">
                   <h1 className="text-3xl font-bold text-center">Work</h1>
                   <p className="text-para text-center">
-                    What I have done and what I am working on.
+                    Projects I have worked on.
                   </p>
                 </div>
                 <Image
@@ -86,7 +86,7 @@ const GetToKnowMe = (props: Props) => {
             whileTap={{ scale: 0.9 }}
           >
             <Link href={"/about"}>
-              <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
+              <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] md:h-[350px] lg:h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
                 <div className="flex flex-col mx-auto items-center -mt-64">
                   <h1 className="text-3xl font-bold text-center">Contact Me</h1>
                   <p className="text-para text-center">Get in touch with me.</p>
@@ -115,7 +115,7 @@ const GetToKnowMe = (props: Props) => {
             whileTap={{ scale: 0.9 }}
           >
             <Link href={"/about"}>
-              <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
+              <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] md:h-[350px] lg:h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
                 <div className="flex flex-col mx-auto items-center -mt-64">
                   <h1 className="text-3xl font-bold text-center">Tech Stack</h1>
                   <p className="text-para text-center">

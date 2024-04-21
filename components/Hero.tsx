@@ -1,30 +1,33 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
 import HeroShimmer from "./HeroShimmer";
 import { Avatar } from "@readyplayerme/visage";
+import Button from "@/components/Button";
 import { memo } from "react";
 
-const modelSrc = "/SwayamModel.glb";
-const animationSrc = "/Hi_animation.fbx";
-
 type Props = {};
+
+type HeroInfo = {
+  heading: string;
+  description: string;
+};
 const Shimmer = () => {
   return <HeroShimmer />;
 };
+
 const Hero = (props: Props) => {
-  const [heading, setHeading] = useState("");
-  const [description, setDescription] = useState("");
+  const [info, setInfo] = useState<HeroInfo[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const modelSrc = "/SwayamModel.glb";
+  const animationSrc = "/Hi_animation.fbx";
 
   useEffect(() => {
     try {
       fetch(process.env.NEXT_PUBLIC_API_URL + "/api/hero")
         .then((res) => res.json())
         .then((data) => {
-          setHeading(data[0].heading);
-          setDescription(data[0].description);
+          setInfo(data);
           setLoading(false);
         });
     } catch (error) {
@@ -41,25 +44,23 @@ const Hero = (props: Props) => {
       ) : (
         <div className="mt-40 mb-20 flex justify-start gap-[16px] p-6 md:p-4 h-96 relative">
           <div className="flex flex-col justify-center gap-[40px]">
-            <div>
+            <div className="w-1/2 lg:w-full">
               <span className="text-6xl font-bold text-para sm:hidden">
-                Hi 👋🏼{" "}
+                Hi{" "}
               </span>
               <h1 className="text-5xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-para">
                 I&apos;m{" "}
-                <span className=" text-black dark:text-white">{heading}</span>
+                <span className=" text-black dark:text-white">
+                  {info && info[0].heading}
+                </span>
               </h1>
+              <p className="text-md lg:text-xl text-para dark:text-para lg:w-[400px] text-balance mt-0 md:mt-4">
+                {info && info[0].description}
+              </p>
             </div>
-            <p className="text-xl text-para dark:text-para w-[500px]">
-              {description}
-            </p>
-            <div className=" space-y-4 md:space-y-0 md:flex justify-start gap-[16px]">
-              <p className="bg-[#1A1A1A] text-white px-[32px] py-[16px] rounded-xl shadow-inner inset-y-0 inset-x-0 shadow-[#3b3b3b] cursor-pointer font-semibold text-center">
-                See my resume
-              </p>
-              <p className="bg-[#1A1A1A]/10 dark:bg-[#1A1A1A] text-[#181818] dark:text-para px-[32px] py-[16px] rounded-xl  text-center">
-                Get in touch
-              </p>
+            <div className="flex flex-col md:flex md:flex-row space-y-4 md:space-y-0 gap-[16px]">
+              <Button text="See my resume" innerShadow={true} />
+              <Button text="Get in touch" innerShadow={false} />
             </div>
           </div>
           {/* <motion.div
@@ -80,15 +81,12 @@ const Hero = (props: Props) => {
               alt="Hero Image"
             />
           </motion.div> */}
-          <div className="h-[50rem] w-[50rem] absolute -top-20 -right-40 -z-50">
+          <div className="absolute -top-12 xl:-top-12 -right-36 -z-50 w-full h-[23rem] md:h-[40rem] lg:h-[47rem] pr-[6.5rem] md:pr-[0rem] lg:pr-[0rem] pl-0 md:pl-[0px] lg:pl-[7rem] xl:pl-48">
             <Avatar
               modelSrc={modelSrc}
               animationSrc={animationSrc}
-              cameraInitialDistance={2}
-              emotion={{
-                mouthSmileLeft: 1, // Adjust this value to make the avatar smile
-                mouthSmileRight: 1, // Adjust this value to make the avatar smile
-              }}
+              cameraInitialDistance={1.9}
+              scale={1.03}
             />
           </div>
         </div>

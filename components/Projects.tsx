@@ -13,7 +13,7 @@ const Projects = (props: Props) => {
       {projects.map((project) => (
         <div
           key={project.title}
-          className="flex flex-col border rounded-3xl shadow-md md:flex-row md:max-w-4xl 2xl:max-w-full border-[#EBEBEB] dark:border-[#383737] bg-[#FBFBFB] dark:bg-[#181818] mb-10"
+          className="flex flex-col border rounded-3xl shadow-md md:flex-row w-fit border-[#EBEBEB] dark:border-[#383737] bg-[#FBFBFB] dark:bg-[#181818] mb-10"
         >
           <div className="flex flex-col justify-between">
             <div className="flex flex-col gap-3 pl-10 pt-10 pr-10 md:pr-0">
