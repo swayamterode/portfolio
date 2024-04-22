@@ -1,6 +1,12 @@
 # Portfolio
 
-This is a modern portfolio website template. It is built using NextJs, Tailwind CSS, ThreeJS & MongoDB. It is fully responsive and can be used for personal portfolio websites.
+This portfolio website is a cutting-edge masterpiece, built using the latest tech stack including NextJs, Tailwind CSS, ThreeJS, & MongoDB.
+
+<div align="center">
+  
+![Portfolio](https://github.com/swayamterode/portfolio/assets/81813786/ca357b51-ae04-40d4-b586-2108d76d0735)
+
+</div>
 
 ## Features
 
