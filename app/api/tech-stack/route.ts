@@ -29,7 +29,7 @@ export const POST = async (request: Request) => {
         JSON.stringify({ message: "Please fill all the fields" }),
         {
           status: 400,
-        }
+        },
       );
     }
 
@@ -56,7 +56,7 @@ export const PUT = async (request: Request) => {
     return new NextResponse("Error in updating.." + error, { status: 500 });
   }
 };
-export const Delete = async (request: Request) => {
+export const DELETE = async (request: Request) => {
   try {
     const body = await request.json();
     await connect();
