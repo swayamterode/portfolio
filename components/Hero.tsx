@@ -81,7 +81,7 @@ const Hero = (props: Props) => {
               alt="Hero Image"
             />
           </motion.div> */}
-          <div className="absolute -top-12 xl:-top-12 -right-36 -z-50 w-full h-[23rem] md:h-[40rem] lg:h-[47rem] pr-[6.5rem] md:pr-[0rem] lg:pr-[0rem] pl-0 md:pl-[0px] lg:pl-[7rem] xl:pl-48">
+          <div className="absolute -top-12 xl:-top-12 -right-36 -z-50 w-full h-[23rem] md:h-[40rem] lg:h-[47rem] pr-[6.5rem] md:pr-[0rem] lg:pr-[0rem] pl-0 md:pl-[0px] xl:pl-48">
             <Avatar
               modelSrc={modelSrc}
               animationSrc={animationSrc}
