@@ -43,22 +43,22 @@ const Hero = (props: Props) => {
         </div>
       ) : (
         <div className="mt-40 mb-20 flex justify-start gap-[16px] p-6 md:p-4 h-96 relative">
-          <div className="flex flex-col justify-center gap-[40px]">
+          <div className="flex flex-col justify-center gap-0 md:gap-[40px]">
             <div className="w-1/2 lg:w-full">
-              <span className="text-6xl font-bold text-para sm:hidden">
+              <span className="text-3xl md:text-6xl font-bold text-para sm:hidden">
                 Hi{" "}
               </span>
-              <h1 className="text-5xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-para">
+              <h1 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-para">
                 I&apos;m{" "}
                 <span className=" text-black dark:text-white">
                   {info && info[0].heading}
                 </span>
               </h1>
-              <p className="text-md lg:text-xl text-para dark:text-para lg:w-[400px] text-balance mt-0 md:mt-4">
+              <p className="text-sm md:text-md lg:text-xl text-para dark:text-para lg:w-[400px] text-balance mt-0 md:mt-4">
                 {info && info[0].description}
               </p>
             </div>
-            <div className="flex flex-col md:flex md:flex-row space-y-4 md:space-y-0 gap-[16px]">
+            <div className=" mt-7 flex flex-col md:flex md:flex-row space-y-4 md:space-y-0 gap-[16px]">
               <Button text="See my resume" innerShadow={true} />
               <Button text="Get in touch" innerShadow={false} />
             </div>
@@ -81,12 +81,11 @@ const Hero = (props: Props) => {
               alt="Hero Image"
             />
           </motion.div> */}
-          <div className="absolute -top-12 xl:-top-12 -right-36 -z-50 w-full h-[23rem] md:h-[40rem] lg:h-[47rem] pr-[6.5rem] md:pr-[0rem] lg:pr-[0rem] pl-0 md:pl-[0px] xl:pl-48">
+          <div className="absolute -top-24 md:-top-20 xl:-top-12 -right-32 -z-50 w-full h-[23rem] md:h-[40rem] lg:h-[47rem] pr-[6.5rem] md:pr-[0rem] lg:pr-[0rem] pl-0 md:pl-[0px] xl:pl-48">
             <Avatar
               modelSrc={modelSrc}
               animationSrc={animationSrc}
-              cameraInitialDistance={1.9}
-              scale={1.03}
+              cameraInitialDistance={2}
             />
           </div>
         </div>

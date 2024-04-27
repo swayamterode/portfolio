@@ -13,7 +13,7 @@ const Projects = (props: Props) => {
       {projects.map((project) => (
         <div
           key={project.title}
-          className="flex flex-col border rounded-3xl shadow-md md:flex-row w-fit border-[#EBEBEB] dark:border-[#383737] bg-[#FBFBFB] dark:bg-[#181818] mb-10"
+          className="flex flex-col border rounded-3xl shadow-md md:flex-row w-fit border-[#EBEBEB] dark:border-[#383737] bg-[#FBFBFB] dark:bg-[#181818] mb-10 max-h-[490px]"
         >
           <div className="flex flex-col justify-between">
             <div className="flex flex-col gap-3 pl-10 pt-10 pr-10 md:pr-0">
@@ -29,7 +29,7 @@ const Projects = (props: Props) => {
                 {project.description}
               </p>
             </div>
-            <div className="flex gap-2 items-center mb-4 pl-10">
+            {/* <div className="flex gap-2 items-center mb-4 pl-10">
               <span className="font-medium">Tech Stack:</span>
               <div className="flex gap-2">
                 <span className="px-2 py-1 text-xs font-semibold text-white bg-[#FBFBFB] dark:bg-[#353535] rounded-lg border-[#EBEBEB] dark:border-[#383737]">
@@ -43,7 +43,7 @@ const Projects = (props: Props) => {
                   React
                 </span>
               </div>
-            </div>
+            </div> */}
             <div className="flex gap-2 items-center mb-4 pl-10 ">
               <Link href={project.link} target="_blank">
                 <span className="hover:text-gray-300">
@@ -63,7 +63,7 @@ const Projects = (props: Props) => {
             alt={project.alt}
             width={265}
             height={265}
-            className="md:w-[380px] md:h-[390px] lg:w-[310.17px] lg:h-[420px] object-contain mx-10 hidden md:block"
+            className="md:min-w-[290px] md:max-h-[495px] lg:w-[310.17px] lg:h-[420px] object-fill mr-4 hidden md:block"
           />
         </div>
       ))}
