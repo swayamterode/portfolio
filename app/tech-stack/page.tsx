@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { set } from "mongoose";
 interface Props {}
 
 const page = () => {
@@ -41,15 +40,18 @@ const page = () => {
           Dev & Design
         </h1>
         {loading && (
-          <div className=" bg-gray-200 dark:bg-[#ffffff19] rounded-3xl  m-4">
-            <div className="p-4 flex justify-center items-center">
-              <div className="w-16 h-12 bg-gray-400 dark:bg-[#ffffff19] animate-pulse transition-all duration-75 rounded-full"></div>
-              <div className="flex w-full justify-between items-center ml-4">
-                <div className="w-[95px] pl-2 h-3 bg-gray-400 dark:bg-[#ffffff19]  animate-pulse rounded-lg"></div>
-                <div className="w-[70px]  h-5 bg-gray-400 dark:bg-[#ffffff19]  animate-pulse rounded-3xl"></div>
+          <>
+            <div className="bg-gray-200 dark:bg-[#ffffff19] rounded-3xl m-4 block sm:block md:hidden 2xl:hidden">
+              <div className="p-4 flex justify-center items-center">
+                <div className="w-16 h-12 bg-gray-400 dark:bg-[#ffffff19] animate-pulse transition-all duration-75 rounded-full"></div>
+                <div className="flex w-full justify-between items-center ml-4">
+                  <div className="w-[95px] pl-2 h-3 bg-gray-400 dark:bg-[#ffffff19]  animate-pulse rounded-lg"></div>
+                  <div className="w-[70px]  h-5 bg-gray-400 dark:bg-[#ffffff19]  animate-pulse rounded-3xl"></div>
+                </div>
               </div>
             </div>
-          </div>
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 w-full md:w-[70%] mx-auto gap-4 p-6 md:p-0"></div>
+          </>
         )}
         <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 w-full md:w-[70%] mx-auto gap-4 p-6 md:p-0">
           {data &&
