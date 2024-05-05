@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/(backend)/utils/databse.js"
+    "app/(backend)/utils/databse.js",
+    "utils/mailService.js"
   ],
   "exclude": ["node_modules"]
 }
