@@ -1,5 +1,6 @@
 import React from "react";
 import GTButton from "./GTButton";
+import Link from "next/link";
 interface Props {}
 
 const Connect = (props: Props) => {
@@ -17,7 +18,9 @@ const Connect = (props: Props) => {
         </div>
 
         <div className="mt-5 w-full md:w-[60%]">
-          <GTButton />
+          <Link href="/contact">
+            <GTButton />
+          </Link>
         </div>
       </div>
     </div>

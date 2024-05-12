@@ -4,6 +4,7 @@ import Image from "next/image";
 import GTButton from "../../components/GTButton";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Link from "next/link";
 type Props = {};
 
 const page = (props: Props) => {
@@ -62,7 +63,7 @@ const page = (props: Props) => {
             <h1 className="text-sm text-[#8080808c] font-medium">{heading2}</h1>
             <p className="text-para font-light">{description2}</p>
           </div>
-          {/* <div className="pt-6 flex flex-col text-justify">
+          <div className="pt-6 flex flex-col text-justify">
             <p className="text-para font-light">
               Before delving into the realm of front end engineering, I spent
               five years as a graphic designer. This background has equipped me
@@ -70,7 +71,7 @@ const page = (props: Props) => {
               user-centered design principles. It enables me to seamlessly blend
               functionality and visual appeal in every project I undertake.
             </p>
-          </div> */}
+          </div>
           <div className="pt-6 flex flex-col text-justify">
             <p className="text-para font-light">
               Feel free to reach out via{" "}
@@ -120,13 +121,16 @@ const page = (props: Props) => {
               className="mx-auto cursor-pointer"
             />
           </motion.div>
-
-          <GTButton />
+          <Link href={"/contact"}>
+            <GTButton />
+          </Link>
         </div>
       </div>
-      <div className="flex justify-center mt-8 lg:hidden">
-        <GTButton />
-      </div>
+      <Link href="/contact">
+        <div className="flex justify-center mt-8 lg:hidden">
+          <GTButton />
+        </div>
+      </Link>
     </div>
   );
 };

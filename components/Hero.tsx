@@ -4,6 +4,8 @@ import HeroShimmer from "./HeroShimmer";
 import { Avatar } from "@readyplayerme/visage";
 import Button from "@/components/Button";
 import { memo } from "react";
+import Link from "next/link";
+import GTButton from "./GTButton";
 
 type Props = {};
 
@@ -60,7 +62,9 @@ const Hero = (props: Props) => {
             </div>
             <div className=" mt-7 flex flex-col md:flex md:flex-row space-y-4 md:space-y-0 gap-[16px]">
               <Button text="See my resume" innerShadow={true} />
-              <Button text="Get in touch" innerShadow={false} />
+              <Link href="/contact">
+                <GTButton />
+              </Link>
             </div>
           </div>
           {/* <motion.div
