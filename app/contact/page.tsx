@@ -33,7 +33,7 @@ const page = (props: Props) => {
           mode: "no-cors",
         },
       );
-      if (response.ok) {
+      if (response.status === 200) {
         Toastify.success("Email sent successfully");
       }
     } catch (error) {
