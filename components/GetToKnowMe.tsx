@@ -55,7 +55,7 @@ const GetToKnowMe = (props: Props) => {
             }}
             whileTap={{ scale: 0.9 }}
           >
-            <Link href={"/about"}>
+            <Link href={"/work"}>
               <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] md:h-[350px] lg:h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
                 <div className="flex flex-col mx-auto items-center -mt-64">
                   <h1 className="text-3xl font-bold text-center">Work</h1>
@@ -85,7 +85,7 @@ const GetToKnowMe = (props: Props) => {
             }}
             whileTap={{ scale: 0.9 }}
           >
-            <Link href={"/about"}>
+            <Link href={"/contact"}>
               <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] md:h-[350px] lg:h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
                 <div className="flex flex-col mx-auto items-center -mt-64">
                   <h1 className="text-3xl font-bold text-center">Contact Me</h1>
@@ -114,7 +114,7 @@ const GetToKnowMe = (props: Props) => {
             }}
             whileTap={{ scale: 0.9 }}
           >
-            <Link href={"/about"}>
+            <Link href={"/tech-stack"}>
               <div className="relative -z-10 flex flex-col justify-center items-center border h-[400px] md:h-[350px] lg:h-[400px] rounded-3xl bg-[#F6F6F6] dark:bg-[#151515] border-[#EBEBEB] dark:border-[#3c3c3c9c] shadow-md">
                 <div className="flex flex-col mx-auto items-center -mt-64">
                   <h1 className="text-3xl font-bold text-center">Tech Stack</h1>
