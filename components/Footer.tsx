@@ -1,10 +1,11 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import SocialLinks from "@/utils/socialLinks";
 interface Props {}
 
 const Footer = (props: Props) => {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
   return (
     <div className="relative z-10">
       <Image
@@ -36,22 +37,22 @@ const Footer = (props: Props) => {
             <div className="flex flex-col gap-[4px]">
               <p className="text-sm font-bold mb-7 dark:text-white ">Links</p>
               <div className="flex flex-col space-y-4">
-                <Link href="/">
+                <Link href="/" scroll>
                   <p className="text-xs  hover:text-gray-500 dark:hover:text-white">
                     Home
                   </p>
                 </Link>
-                <Link href="/about">
+                <Link href="/about" scroll>
                   <p className="text-xs  hover:text-gray-700 dark:hover:text-white">
                     About
                   </p>
                 </Link>
-                <Link href="/tech-stack">
+                <Link href="/tech-stack" scroll>
                   <p className="text-xs  hover:text-gray-700 dark:hover:text-white">
                     Tech Stack
                   </p>
                 </Link>
-                <Link href="/contact">
+                <Link href="/contact" scroll>
                   <p className="text-xs  hover:text-gray-700 dark:hover:text-white">
                     Contact
                   </p>
@@ -63,31 +64,16 @@ const Footer = (props: Props) => {
                 Elsewhere
               </p>
               <div className="flex flex-col space-y-4">
-                <Link href="mailto:swayamterodex@gmail.com">
-                  <p className="text-xs  hover:text-gray-700 dark:hover:text-white">
-                    Email
-                  </p>
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/in/swayamterode/"
-                  target="_blank"
-                >
-                  <p className="text-xs  hover:text-gray-700 dark:hover:text-white">
-                    LinkedIn
-                  </p>
-                </Link>
-                <Link href="https://github.com/swayamterode" target="_blank">
-                  <p className="text-xs  hover:text-gray-700 dark:hover:text-white">
-                    GitHub
-                  </p>
-                </Link>
+                <SocialLinks name="Mail" isFooter={true} />
+                <SocialLinks name="GitHub" isFooter={true} />
+                <SocialLinks name="LinkedIn" isFooter={true} />
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

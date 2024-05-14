@@ -5,23 +5,20 @@ import GTButton from "../../components/GTButton";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Link from "next/link";
+import SocialLinks from "@/utils/SocialLinks";
 type Props = {};
 
-const page = (props: Props) => {
-  const [heading1, setHeading1] = useState("");
-  const [heading2, setHeading2] = React.useState("");
-  const [description1, setDescription1] = React.useState("");
-  const [description2, setDescription2] = React.useState("");
+const about: React.FC<Props> = () => {
+  const [data, setData] = useState<any>();
+
   React.useEffect(() => {
     fetch(process.env.NEXT_PUBLIC_API_URL + "/api/about-me")
       .then((data) => data.json())
       .then((data) => {
-        setHeading1(data[0].heading1);
-        setDescription1(data[0].description1);
-        setHeading2(data[0].heading2);
-        setDescription2(data[0].description2);
+        setData(data[0]); // assuming data[0] is the object with the properties you need
       });
   }, []);
+
   return (
     <div className="mb-10">
       {/* Page heading */}
@@ -36,7 +33,7 @@ const page = (props: Props) => {
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-[#ffffff19]" />
 
       {/* Content */}
-      <div className="flex flex-col justify-between lg:flex-row w-full md:w-[70%] mx-auto">
+      <div className="flex flex-col justify-between lg:flex-row w-full md:w-[70%] mx-auto min-h-[31rem]">
         {/* Image for Mobile*/}
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -56,53 +53,26 @@ const page = (props: Props) => {
         {/* Common Description */}
         <div className="flex flex-col lg:w-[80%] px-6 lg:px-0">
           <div className="pt-6 flex flex-col text-justify ">
-            <h1 className="text-lg text-[#8080808c] font-medium">{heading1}</h1>
-            <p className="text-para font-light">{description1}</p>
+            <h1 className="text-lg text-[#8080808c] font-medium">
+              {data?.heading1}
+            </h1>
+            <p className="text-para font-light">{data?.description1}</p>
           </div>
           <div className="pt-6 flex flex-col text-justify">
-            <h1 className="text-sm text-[#8080808c] font-medium">{heading2}</h1>
-            <p className="text-para font-light">{description2}</p>
-          </div>
-          <div className="pt-6 flex flex-col text-justify">
-            <p className="text-para font-light">
-              Before delving into the realm of front end engineering, I spent
-              five years as a graphic designer. This background has equipped me
-              with a keen eye for aesthetics and a deep understanding of
-              user-centered design principles. It enables me to seamlessly blend
-              functionality and visual appeal in every project I undertake.
-            </p>
+            <h1 className="text-lg text-[#8080808c] font-medium">
+              {data?.heading2}
+            </h1>
+            <p className="text-para font-light">{data?.description2}</p>
           </div>
           <div className="pt-6 flex flex-col text-justify">
             <p className="text-para font-light">
-              Feel free to reach out via{" "}
-              <a
-                href="mailto:swayamterodex@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-                className="text-black font-semibold dark:text-white underline cursor-pointer"
-              >
-                e-mail
-              </a>
-              , or follow me on{" "}
-              <a
-                href="https://twitter.com/swayamterode"
-                target="_blank"
-                rel="noreferrer"
-                className="text-black font-semibold dark:text-white underline cursor-pointer"
-              >
-                Twitter
-              </a>
-              . Want to see where I’ve worked? Check out my Resume, or Connect
-              with me on{" "}
-              <a
-                href="https://www.linkedin.com/in/swayamterode/"
-                target="_blank"
-                rel="noreferrer"
-                className="text-black font-semibold dark:text-white underline cursor-pointer"
-              >
-                LinkedIn
-              </a>
-              .
+              Hey, eager to connect? Drop me a line via{" "}
+              <SocialLinks name="Mail" />, or let's spark up a conversation on{" "}
+              <SocialLinks name="Twitter" /> ! Curious about my journey? Dive
+              into my resume for a sneak peek, or let's link up on{" "}
+              <SocialLinks name="LinkedIn" /> for a deeper dive into my
+              professional endeavors. Can't wait to connect and explore
+              opportunities together! 🚀💬
             </p>
           </div>
         </div>
@@ -121,12 +91,12 @@ const page = (props: Props) => {
               className="mx-auto cursor-pointer"
             />
           </motion.div>
-          <Link href={"/contact"}>
+          <Link href={"/contact"} scroll>
             <GTButton />
           </Link>
         </div>
       </div>
-      <Link href="/contact">
+      <Link href="/contact" scroll>
         <div className="flex justify-center mt-8 lg:hidden">
           <GTButton />
         </div>
@@ -135,4 +105,4 @@ const page = (props: Props) => {
   );
 };
 
-export default page;
+export default about;
