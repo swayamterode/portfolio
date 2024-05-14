@@ -111,3 +111,8 @@ export const cards = [
     category: "Database",
   },
 ];
+
+export const GITHUB_URL = "https://github.com/swayamterode";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/swayamterode/";
+export const TWITTER_URL = "https://twitter.com/swayamterode";
+export const MAIL_URL = "mailto:terodeswayam@gmail.com";
