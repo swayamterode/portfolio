@@ -18,7 +18,7 @@ const Connect = (props: Props) => {
         </div>
 
         <div className="mt-5 w-full md:w-[60%]">
-          <Link href="/contact">
+          <Link href="/contact" scroll>
             <GTButton />
           </Link>
         </div>
