@@ -63,7 +63,7 @@ const Hero = (props: Props) => {
             <div className=" mt-7 flex flex-col md:flex md:flex-row space-y-4 md:space-y-0 gap-[16px]">
               <Button text="See my resume" innerShadow={true} />
               <Link href="/contact">
-                <GTButton />
+                <GTButton fullWidth={true} />
               </Link>
             </div>
           </div>

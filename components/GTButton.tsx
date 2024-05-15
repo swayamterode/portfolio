@@ -1,11 +1,18 @@
 import React from "react";
 
-type Props = {};
+type Props = {
+  fullWidth?: boolean;
+};
 
-const GTButton = (props: Props) => {
+const GTButton = ({ fullWidth }: Props) => {
+  let width = fullWidth
+    ? "w-full px-[32px] py-[16px] flex justify-center item-center"
+    : "px-[32px] py-[16px]";
   return (
     <div className="flex justify-center items-center group">
-      <p className="flex gap-3 items-center bg-[#1A1A1A] text-white group-hover:text-slate-300 px-[32px] py-[16px] rounded-xl shadow-inner inset-y-0 inset-x-0 shadow-[#3b3b3b] cursor-pointer font-semibold text-center transition-all duration-300">
+      <p
+        className={`flex gap-3 items-center bg-[#1A1A1A] text-white group-hover:text-slate-300 ${width} rounded-xl shadow-inner inset-y-0 inset-x-0 shadow-[#3b3b3b] cursor-pointer font-semibold text-center transition-all duration-300`}
+      >
         <svg
           width="20"
           height="20"
