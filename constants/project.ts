@@ -3,7 +3,7 @@ export const projects = [
   {
     title: "Parkbuddy",
     description:
-      "Subbi is a side project that I’ve built to help me keep track of how much I spend on subscriptions and also to prevent the “accidental” bill after a 14-day trail ends. It helps you keep track of bills like Netflix, Spotify, Xbox Game Pass, Bus Card, Bank Cards, and many more.",
+      "Developed a smart parking web app enabling users to pre-book slots with license plate details, location, date, and timing. Utilized Google Cloud Vision AI and a 5MP Raspberry Pi 4 camera for automated vehicle access via servo control, validating user credentials and slot reservations. Integrated Stripe for secure payments. Presented the IoT-based solution at IEEE IATMSI-2024 conference.",
     logo: "/parkbuddy.svg",
     link: "https://parkbuddy.vercel.app/",
     github: "https://github.com/swayamterode/Parkbuddy",
