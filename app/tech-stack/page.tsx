@@ -57,7 +57,7 @@ const page = () => {
         </> */}
         {/* )} */}
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 w-full md:w-[70%] mx-auto gap-4 p-6 md:p-0 pb-24">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 w-full md:w-[70%] mx-auto gap-4 p-6 md:p-0 pb-10 md:pb-24">
           {/* {data && */}
           {(TechStackCards as any[]).map((card, index: number) => (
             <div

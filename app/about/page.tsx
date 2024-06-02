@@ -26,7 +26,7 @@ const about: React.FC<Props> = () => {
         <h1 className="text-4xl md:text-5xl text-black dark:text-white font-bold ">
           A little bit about me
         </h1>
-        <span className="text-[#808080]">Who I am and what I do.</span>
+        <span className="dark:text-[#808080]">Who I am and what I do.</span>
       </div>
 
       {/* Divider */}
@@ -53,15 +53,19 @@ const about: React.FC<Props> = () => {
         {/* Common Description */}
         <div className="flex flex-col lg:w-[80%] px-6 lg:px-0">
           <div className="pt-6 flex flex-col text-justify ">
-            <h1 className="text-lg text-[#8080808c] font-medium">Who I am</h1>
-            <p className="text-para font-light">{WHO_IAM_DATA}</p>
+            <h1 className="text-lg dark:text-[#8080808c] font-medium">
+              Who I am
+            </h1>
+            <p className="dark:text-para font-light">{WHO_IAM_DATA}</p>
           </div>
           <div className="pt-6 flex flex-col text-justify">
-            <h1 className="text-lg text-[#8080808c] font-medium">What I do</h1>
-            <p className="text-para font-light">{WHAT_I_DO}</p>
+            <h1 className="text-lg dark:text-[#8080808c] font-medium">
+              What I do
+            </h1>
+            <p className="dark:text-para font-light">{WHAT_I_DO}</p>
           </div>
           <div className="pt-6 flex flex-col text-justify">
-            <p className="text-para font-light">
+            <p className="dark:text-para font-light">
               Hey, eager to connect? Drop me a line via{" "}
               <SocialLinks name="Mail" />, or let's spark up a conversation on{" "}
               <SocialLinks name="Twitter" /> ! Curious about my journey? Dive

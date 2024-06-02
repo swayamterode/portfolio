@@ -107,7 +107,7 @@ const page = (props: Props) => {
 
                 <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-[#2F2F2F]" />
                 {/* Message */}
-                <div className="px-7 mb-5">
+                <div className="px-1 md:px-7 mb-5">
                   <textarea
                     className="bg-inherit w-full h-[200px] md:h-[244px] lg:h-[344px] resize-none placeholder:text-[#4C4C4C] bg-[#e6e5e5] dark:bg-[#0D0D0D] rounded-2xl p-4 focus:outline-none focus:border-transparent focus:ring-transparent"
                     required
