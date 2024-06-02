@@ -1,0 +1,28 @@
+{
+  "name": "Swayam Terode",
+  "short_name": "Swayam Terode",
+  "description": "I'm Swayam Terode, a dedicated Software Development Engineer who codes by day and masters snooker and table tennis by the weekend. Let's connect!",
+  "icons": [
+    {
+      "src": "/pwa-icons/logo@192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/pwa-icons/logo@384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-icons/logo@512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#F0F1F9",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
