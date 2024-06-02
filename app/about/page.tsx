@@ -3,21 +3,21 @@ import React from "react";
 import Image from "next/image";
 import GTButton from "../../components/GTButton";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import Link from "next/link";
 import SocialLinks from "@/utils/SocialLinks";
+import { WHO_IAM_DATA, WHAT_I_DO } from "@/constants/data";
 type Props = {};
 
 const about: React.FC<Props> = () => {
-  const [data, setData] = useState<any>();
+  // const [data, setData] = useState<any>();
 
-  React.useEffect(() => {
-    fetch(process.env.NEXT_PUBLIC_API_URL + "/api/about-me")
-      .then((data) => data.json())
-      .then((data) => {
-        setData(data[0]); // assuming data[0] is the object with the properties you need
-      });
-  }, []);
+  // React.useEffect(() => {
+  //   fetch(process.env.NEXT_PUBLIC_API_URL + "/api/about-me")
+  //     .then((data) => data.json())
+  //     .then((data) => {
+  //       setData(data[0]); // assuming data[0] is the object with the properties you need
+  //     });
+  // }, []);
 
   return (
     <div className="mb-10">
@@ -53,16 +53,12 @@ const about: React.FC<Props> = () => {
         {/* Common Description */}
         <div className="flex flex-col lg:w-[80%] px-6 lg:px-0">
           <div className="pt-6 flex flex-col text-justify ">
-            <h1 className="text-lg text-[#8080808c] font-medium">
-              {data?.heading1}
-            </h1>
-            <p className="text-para font-light">{data?.description1}</p>
+            <h1 className="text-lg text-[#8080808c] font-medium">Who I am</h1>
+            <p className="text-para font-light">{WHO_IAM_DATA}</p>
           </div>
           <div className="pt-6 flex flex-col text-justify">
-            <h1 className="text-lg text-[#8080808c] font-medium">
-              {data?.heading2}
-            </h1>
-            <p className="text-para font-light">{data?.description2}</p>
+            <h1 className="text-lg text-[#8080808c] font-medium">What I do</h1>
+            <p className="text-para font-light">{WHAT_I_DO}</p>
           </div>
           <div className="pt-6 flex flex-col text-justify">
             <p className="text-para font-light">

@@ -9,7 +9,7 @@ type Props = {};
 
 const Projects = (props: Props) => {
   return (
-    <>
+    <div className="z-30">
       {projects.map((project) => (
         <div
           key={project.title}
@@ -67,7 +67,7 @@ const Projects = (props: Props) => {
           />
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

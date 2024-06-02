@@ -14,7 +14,7 @@ const Page = (props: Props) => {
         <span className="text-[#808080]">Lets build something awesome</span>
       </div>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-[#ffffff19]" />
-      <div className="flex flex-col justify-center items-center mx-auto w-[358px] md:w-[680px] lg:w-[1100px] my-20 px-2 md:px-0">
+      <div className="flex flex-col justify-center items-center mx-auto w-[358px] md:w-[680px] lg:w-[1000px] my-20 px-2 md:px-0">
         <Projects />
       </div>
     </div>
