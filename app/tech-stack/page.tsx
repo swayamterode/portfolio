@@ -28,19 +28,22 @@ const page = () => {
           <h1 className="text-4xl md:text-5xl text-black dark:text-white font-bold ">
             Tech Stack & Tools
           </h1>
-          <span className="text-[#808080]">Who I am and what I do.</span>
+          <span className="text-[#808080]">
+            A list of technologies I use to build web applications
+          </span>
         </div>
 
         {/* Divider */}
         <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-[#ffffff19]" />
 
         {/* Tech stack */}
-
         <h1 className="mt-10 md:mt-14 mb-3 md:mb-10 pl-6 md:p-0 text-para text-4xl font-bold md:w-[70%] mx-auto">
-          Dev & Design
+          Technologies I use
         </h1>
+        {/* Loader */}
+
         {/* {loading && ( */}
-        <>
+        {/* <>
           <div className="bg-gray-200 dark:bg-[#ffffff19] rounded-3xl m-4 block sm:block md:hidden 2xl:hidden">
             <div className="p-4 flex justify-center items-center">
               <div className="w-16 h-12 bg-gray-400 dark:bg-[#ffffff19] animate-pulse transition-all duration-75 rounded-full"></div>
@@ -51,8 +54,9 @@ const page = () => {
             </div>
           </div>
           <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 w-full md:w-[70%] mx-auto gap-4 p-6 md:p-0 pb-20"></div>
-        </>
+        </> */}
         {/* )} */}
+
         <div className="grid md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 w-full md:w-[70%] mx-auto gap-4 p-6 md:p-0 pb-24">
           {/* {data && */}
           {(TechStackCards as any[]).map((card, index: number) => (
