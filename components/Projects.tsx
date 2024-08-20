@@ -9,42 +9,27 @@ type Props = {};
 
 const Projects = (props: Props) => {
   return (
-    <div className="z-30">
+    <>
       {projects.map((project) => (
         <div
           key={project.title}
-          className="flex flex-col border rounded-3xl shadow-md md:flex-row w-fit border-[#EBEBEB] dark:border-[#383737] bg-[#FBFBFB] dark:bg-[#181818] mb-10 max-h-[490px]"
+          className="relative flex flex-col border rounded-3xl shadow-md md:flex-row w-fit border-[#EBEBEB] dark:border-[#383737] bg-[#FBFBFB] dark:bg-[#181818] mb-10 min-h-[490px] md:max-h-[490px] max-w-[950px]"
         >
-          <div className="flex flex-col justify-between">
-            <div className="flex flex-col gap-3 pl-10 pt-10 pr-10 md:pr-0">
+          <div className="flex flex-col justify-between md:w-[60%] p-10">
+            <div className="flex flex-col gap-3">
               <Image
                 src={project.logo}
                 alt={project.alt}
                 width={300}
                 height={300}
-                className="w-14 h-14"
+                className="w-14 h-14 object-contain"
               />
               <h1 className="text-3xl font-bold">{project.title}</h1>
               <p className="mb-5 font-normal text-gray-700 dark:text-gray-400 text-justify 2xl:text-xl">
                 {project.description}
               </p>
             </div>
-            {/* <div className="flex gap-2 items-center mb-4 pl-10">
-              <span className="font-medium">Tech Stack:</span>
-              <div className="flex gap-2">
-                <span className="px-2 py-1 text-xs font-semibold text-white bg-[#FBFBFB] dark:bg-[#353535] rounded-lg border-[#EBEBEB] dark:border-[#383737]">
-                  React
-                </span>
-
-                <span className="px-2 py-1 text-xs font-semibold text-white bg-[#FBFBFB] dark:bg-[#353535] rounded-lg border-[#EBEBEB] dark:border-[#383737]">
-                  React
-                </span>
-                <span className="px-2 py-1 text-xs font-semibold text-white bg-[#FBFBFB] dark:bg-[#353535] rounded-lg border-[#EBEBEB] dark:border-[#383737]">
-                  React
-                </span>
-              </div>
-            </div> */}
-            <div className="flex gap-2 items-center mb-4 pl-10 ">
+            <div className="flex gap-2 items-center mb-4">
               <Link href={project.link} target="_blank">
                 <span className="hover:text-gray-300">
                   <FiExternalLink className="text-blue-500 hover:text-blue-600 cursor-pointer" />
@@ -58,16 +43,20 @@ const Projects = (props: Props) => {
               </Link>
             </div>
           </div>
-          <Image
-            src={project.image}
-            alt={project.alt}
-            width={265}
-            height={265}
-            className="md:min-w-[290px] md:max-h-[495px] lg:w-[310.17px] lg:h-[420px] object-fill mr-4 hidden md:block"
-          />
+          <div className={project.imageDiv}>
+            <Link href={project.link} target="_blank">
+              <Image
+                src={project.image}
+                alt={project.alt}
+                width={234}
+                height={234}
+                className={project.className}
+              />
+            </Link>
+          </div>
         </div>
       ))}
-    </div>
+    </>
   );
 };
 

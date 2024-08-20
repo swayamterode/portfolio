@@ -7,8 +7,11 @@ export const projects = [
     logo: "/parkbuddy.svg",
     link: "https://parkbuddy.vercel.app/",
     github: "https://github.com/swayamterode/Parkbuddy",
-    image: "/ParkbuddyMockup.png",
+    image: "/parkbuddy-mockup.png",
     alt: "Parkbuddy",
+    imageDiv: "w-0 md:w-[40%] lg:w-[35%] relative overflow-hidden",
+    className:
+      "object-contain lg:rotate-[8deg] absolute top-12 lg:scale-105 lg:top-16 lg:left-10",
   },
   {
     title: "Watchflix",
@@ -17,7 +20,9 @@ export const projects = [
     logo: "/watchflix.svg",
     link: "https://watchflix-gpt-ai.web.app/",
     github: "https://github.com/swayamterode/WatchflixGPT",
-    image: "/ParkbuddyMockup.png",
+    image: "/Watchflix.app.png",
     alt: "WatchFlix",
+    imageDiv: "w-[40%] relative overflow-hidden",
+    className: "object-contain absolute left-12 h-full w-full scale-125",
   },
 ];
