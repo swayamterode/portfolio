@@ -7,7 +7,7 @@ export const projects = [
     logo: "/parkbuddy.svg",
     link: "https://parkbuddy.vercel.app/",
     github: "https://github.com/swayamterode/Parkbuddy",
-    image: "/parkbuddy-mockup.png",
+    image: "/mockup_parkbuddy.png",
     alt: "Parkbuddy",
     imageDiv: "w-0 md:w-[40%] lg:w-[35%] relative overflow-hidden",
     className:
@@ -20,7 +20,7 @@ export const projects = [
     logo: "/watchflix.svg",
     link: "https://watchflix-gpt-ai.web.app/",
     github: "https://github.com/swayamterode/WatchflixGPT",
-    image: "/Watchflix.app.png",
+    image: "/mockup_watchflix.png",
     alt: "WatchFlix",
     imageDiv: "w-[40%] relative overflow-hidden",
     className: "object-contain absolute left-12 h-full w-full scale-125",
