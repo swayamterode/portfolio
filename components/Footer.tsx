@@ -22,7 +22,7 @@ const Footer = (props: Props) => {
         <div className="flex flex-col md:flex-row justify-between mx-auto pt-[12px] pb-[120px] md:pb-10 px-8 md:px-0">
           <div className="flex flex-col md:justify-between gap-3 md:gap-[93px]">
             <div>
-              <p className="text-2xl font-bold">Logo</p>
+              <p className="text-2xl font-bold">Swayam</p>
               <p className="text-xs text-[#181818] dark:text-footer_text">
                 Thanks for stopping by ッ
               </p>

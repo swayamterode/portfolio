@@ -12,7 +12,7 @@ const Navbar = (props: Props) => {
       {/* Img */}
       {/* Nav Links */}
       <div className="flex flex-row justify-between gap-[40px] items-center">
-        <Link href={"/"}>Logo</Link>
+        <Link href={"/"}>Swayam</Link>
         <Link
           href="/about"
           className="text-light-nav dark:text-nav font-normal leading-normal"

@@ -13,16 +13,16 @@ export const projects = [
     className:
       "object-contain lg:rotate-[8deg] absolute top-12 lg:scale-105 lg:top-16 lg:left-10",
   },
-  {
-    title: "Watchflix",
-    description:
-      "Stream seamlessly with user-friendly interface powered by Tailwind CSS and React. Discover movies effortlessly using mood-based searches through the Open AI API. Enjoy a global experience with multilingual support. Secure logins and sign-ups through Firebase, and comprehensive movie data fetched via the TMDB API.",
-    logo: "/watchflix.svg",
-    link: "https://watchflix-gpt-ai.web.app/",
-    github: "https://github.com/swayamterode/WatchflixGPT",
-    image: "/mockup_watchflix.png",
-    alt: "WatchFlix",
-    imageDiv: "w-[40%] relative overflow-hidden",
-    className: "object-contain absolute left-12 h-full w-full scale-125",
-  },
+  // {
+  //   title: "Watchflix",
+  //   description:
+  //     "Stream seamlessly with user-friendly interface powered by Tailwind CSS and React. Discover movies effortlessly using mood-based searches through the Open AI API. Enjoy a global experience with multilingual support. Secure logins and sign-ups through Firebase, and comprehensive movie data fetched via the TMDB API.",
+  //   logo: "/watchflix.svg",
+  //   link: "https://watchflix-gpt-ai.web.app/",
+  //   github: "https://github.com/swayamterode/WatchflixGPT",
+  //   image: "/mockup_watchflix.png",
+  //   alt: "WatchFlix",
+  //   imageDiv: "w-[40%] relative overflow-hidden",
+  //   className: "object-contain absolute left-12 h-full w-full scale-125",
+  // },
 ];
