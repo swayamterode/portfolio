@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
     return ApiResponse(400, "Error: Please fill in all fields");
   }
 
-  const recipientHTML = `<p>This is a template email from: ${name}, Message: ${message}</p>`;
+  const recipientHTML = `<p>You just received a mail from: ${name}, Email: ${email}, Message: ${message}</p>`;
   try {
     const recipientEmail: Params = {
       from: email,
